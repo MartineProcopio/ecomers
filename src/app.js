@@ -1,13 +1,15 @@
-const express = require('express');
-const webRouter = require('./reuters/web.routes');
-const path = require('path');
+const express = require("express");
+const appRouter = require("./reuters/app.routes");
+const path = require("path");
 
 const app = express();
 
-app.set('views', path.join(__dirname,'views')) //acomoda el formato de las carpetas, __dirname carpeta a donde estas
+app.use(express.json()); //para que entienda json
+app.use(express.urlencoded({ extended: false })); //para que entienda formularios
 
-app.set('view engine', 'ejs'); // motor de vistas
+app.set("views", path.join(__dirname, "views")); //acomoda el formato de las carpetas, __dirname carpeta a donde estas
+app.set("view engine", "ejs"); // motor de vistas
 
-app.use(webRouter) //ejecutando ruta de web.routes
+app.use(appRouter); //ejecutando ruta de web.routes
 
-module.exports = app
+module.exports = app;

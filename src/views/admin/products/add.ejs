@@ -12,12 +12,15 @@
     <% } %>
 
     <h1>Agregar Producto</h1>
-    <form action="/admin/products" method="post">
+    <form action="/admin/products" method="post" enctype="multipart/form-data">
       <label for="name">Nombre</label>
       <input type="text" name="name" />
 
       <label for="price">Precio</label>
       <input type="number" name="price" />
+
+      <label for="imagen">Imagen del Producto</label>
+      <input type="file" name="imagen">
 
       <button type="submit">Agregar</button>
     </form>

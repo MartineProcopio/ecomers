@@ -1,8 +1,9 @@
 const express = require("express");
 const models = require("../../database/models");
 const webRouter = express.Router(); //instancia de routeador
+const loger = require('../../middlewares/logmiddlware')
 
-webRouter.get("/", (req, res) => {
+webRouter.get("/", loger ,(req, res) => {
   res.render("index");
 });
 

@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "DorianElGris1986",
+    "password": "",
     "database": "ecomers_dev",
     "host": "127.0.0.1",
     "dialect": "mysql"

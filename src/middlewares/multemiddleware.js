@@ -3,6 +3,7 @@ const { assert } = require('console')
 const multer = require('multer')
 const path = require('path')
 
+//control de flujos
 //cibfiguracion de donde y como se almacenan las imagenes
 const store = multer.diskStorage({
     destination:function(req,file,cb){

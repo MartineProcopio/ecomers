@@ -1,4 +1,5 @@
 const express = require("express");
+const productControler = require("../../controllers/pruductControler");
 const models = require("../../database/models");
 const webRouter = express.Router(); //instancia de routeador
 const loger = require('../../middlewares/logmiddlware')
@@ -12,9 +13,6 @@ webRouter.post("/products", async (req, res) => {
   res.send(product);
 });
 
-webRouter.get("/products", async (req, res) => {
-  const products = await models.Product.findAll();
-  res.send(products);
-});
+webRouter.get("/products", productControler.list);
 
 module.exports = webRouter;

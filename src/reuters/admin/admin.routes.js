@@ -1,9 +1,8 @@
 const adminRouter = require("express").Router();
+const adminControler = require("../../controllers/adminControler");
 const adminProductsRouter = require("./adminProducts.routes");
 
-adminRouter.get("/", (req, res) => {
-  res.render("admin/dashboard");
-});
+adminRouter.get('/',adminControler.index)
 
 adminRouter.use("/products", adminProductsRouter);
 

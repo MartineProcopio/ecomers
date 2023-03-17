@@ -1,5 +1,5 @@
 const express = require("express");
-const appRouter = require("./reuters/app.routes");
+const appRouter = require("./routes/app.routes");
 const path = require("path");
 
 const app = express();

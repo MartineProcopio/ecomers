@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('../partials/header') %>
+<body>
+<%- include('../partials/navbar') %>
+<header class="d-flex justify-content-between align-items-center py-3 px-5">
+    <h1>Detalle Producto</h1>
+    <a href="/"  class="">Volver atras</a>
+</header>
+
+<section class="container">
+    <h2><%= product.name%></h2>
+    <div class="row my-5" >
+        <div class="col-6">
+            <img src="/<%= product.imagen %>" alt="" class="img-fluid">
+        </div>
+        <div class="col-6">
+            <p>$<%= product.price %></p>
+
+        </div>
+    </div>
+</section>
+<%- include('../partials/footer') %>
+</body>
+</html>

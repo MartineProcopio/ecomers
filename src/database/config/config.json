@@ -1,9 +1,9 @@
 {
   "development": {
     "username": "root",
-    "password": "",
+    "password": "root",
     "database": "ecomers_dev",
-    "host": "127.0.0.1",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
@@ -15,9 +15,10 @@
   },
   "production": {
     "username": "root",
-    "password": null,
-    "database": "ecomers_pro",
-    "host": "127.0.0.1",
+    "password": "0h4mq4nuTVvdAQqbnLhU",
+    "database": "railway",
+    "host": "containers-us-west-174.railway.app",
+    "port": 7127,
     "dialect": "mysql"
   }
 }

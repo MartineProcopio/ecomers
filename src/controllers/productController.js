@@ -6,6 +6,12 @@ const productController = {
         res.render('admin/products/list',{products})
     },
 
+    detail: async(req, res) =>{
+        const id = req.params.id
+        const product = await Product.findByPk(id)
+        res.render('products/detail', {product})
+    },
+
     create: (req, res) =>{
         const error = req.query.error
         res.render('admin/products/add', {error})
@@ -24,10 +30,10 @@ const productController = {
               createdAt: new Date(),
               updatedAt: new Date(),
             });
-            res.redirect("/admin/products/list");
+            res.redirect("/products/list");
           } catch (error) {
             console.error(error);
-            res.redirect("/admin/products/create?error=campos_incorrecotos");
+            res.redirect("/products/create?error=campos_incorrecotos");
           }
     },
 

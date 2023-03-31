@@ -9,6 +9,7 @@ appRouter.get("/",logger, webController.index);
 
 appRouter.get("/products/list", productController.list);
 appRouter.get("/products/create", productController.create);
+appRouter.get('/products/:id', productController.detail);
 appRouter
   .post("/products/store", 
   upload.single('imagen'),

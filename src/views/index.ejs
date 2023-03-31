@@ -2,15 +2,21 @@
 <html lang="en">
 <%- include('partials/header') %>
 <body>
-    <%- include('partials/navbar') %>
-    <h1>Pagina Principal</h1>
-    <section>
-        <ul>
-            <lI><a href="/products/list">todos los productos</a></lI>
-            <lI><a href="/products/create">Agregar Prodcuto</a></lI>
-        </ul>
-    </section>
-    <h2>indice</h2>
+<%- include('partials/navbar') %>
+<h1>Tienda de Ropa</h1>
+<section class="container">
+    <h2>Nuestros Productos</h2>
+    <div class="row">
+        <% products.forEach(function(product) { %>
+            <article class="col-md-4">
+                <%- include('partials/cardProduct',{product}) %>
+            </article>
+        <% }); %>
+
+    </div>
+
+</section>
+<%- include('partials/footer') %>
 </body>
 </html>
 
